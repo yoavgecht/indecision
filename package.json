@@ -7,8 +7,11 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://yoavgecht.github.io/indecision/",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -28,5 +31,8 @@
     "validator": "^9.2.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
